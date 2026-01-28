@@ -16,8 +16,8 @@ Harald Kirschner `@digitarald`
 ## Setup
 
 
-1. Open https://github.com/microsoft/vscode-agent-lab-soc-ops
-   1. *Use this template* > *Create a new repository* (pick `my-soc-ops`, make it *Public*)
+1. Open https://github.com/jamesmontemagno/vscode-agent-lab-soc-ops-csharp
+   1. *Use this template* > *Create a new repository* (pick `my-soc-ops-csharp`, make it *Public*)
       - ✅ Your own *soc-ops* GitHub repo is ready
    2. ⚠️ Enable *Settings* > *Pages* > *Deploy from a branch* to *GitHub Actions*
       - ✅ Any commit to the repo will publish the game as GitHub page: `http://{your-gh-username}.github.io/{my-soc-ops}`
