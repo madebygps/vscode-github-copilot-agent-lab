@@ -211,9 +211,11 @@ Congratulations! You've completed the VS Code GitHub Copilot Agent Lab.
 
 ---
 
+👉 **[🎉 Celebrate Your Completion! →](05-complete.md)**
+
 ---
 
-[🎮 Live Demo](https://dotnet-presentations.github.io/vscode-github-copilot-agent-lab/) • [📚 Lab Guide](https://dotnet-presentations.github.io/vscode-github-copilot-agent-lab/docs/) • [← Part 3](03-quiz-master.md) • [🏠 Overview](00-overview.md)
+[🎮 Play Game](https://dotnet-presentations.github.io/vscode-github-copilot-agent-lab/) • [📚 Lab Guide](https://dotnet-presentations.github.io/vscode-github-copilot-agent-lab/docs/) • [← Part 3](03-quiz-master.md)
 
 Happy Coding! 👋
 

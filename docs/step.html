@@ -502,6 +502,7 @@
         </main>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
     <script>
         // Define all steps in order
         const steps = [
@@ -511,7 +512,47 @@
             { id: '02-design', file: '02-design.md', title: 'Design-First Frontend', number: '02' },
             { id: '03-quiz-master', file: '03-quiz-master.md', title: 'Custom Quiz Master', number: '03' },
             { id: '04-multi-agent', file: '04-multi-agent.md', title: 'Multi-Agent Development', number: '04' },
+            { id: '05-complete', file: '05-complete.md', title: '🎉 Complete!', number: '🎉' },
         ];
+
+        // Confetti celebration function
+        function celebrate() {
+            const duration = 3000;
+            const end = Date.now() + duration;
+
+            const colors = ['#00f5ff', '#ff00ff', '#b366ff', '#00ff88', '#ffff00'];
+
+            (function frame() {
+                confetti({
+                    particleCount: 5,
+                    angle: 60,
+                    spread: 55,
+                    origin: { x: 0 },
+                    colors: colors
+                });
+                confetti({
+                    particleCount: 5,
+                    angle: 120,
+                    spread: 55,
+                    origin: { x: 1 },
+                    colors: colors
+                });
+
+                if (Date.now() < end) {
+                    requestAnimationFrame(frame);
+                }
+            }());
+        }
+
+        // Big confetti burst
+        function bigCelebrate() {
+            confetti({
+                particleCount: 150,
+                spread: 100,
+                origin: { y: 0.6 },
+                colors: ['#00f5ff', '#ff00ff', '#b366ff', '#00ff88', '#ffff00']
+            });
+        }
 
         // Base URL for fetching markdown from GitHub
         const GITHUB_RAW_BASE = 'https://raw.githubusercontent.com/dotnet-presentations/vscode-github-copilot-agent-lab/main/.lab/';
@@ -627,6 +668,34 @@
                 });
 
                 document.getElementById('markdown-content').innerHTML = marked.parse(md);
+
+                // If this is the completion page, add confetti!
+                if (step.id === '05-complete') {
+                    // Trigger celebration on load
+                    setTimeout(celebrate, 500);
+                    
+                    // Add the confetti button
+                    const btnContainer = document.getElementById('confetti-btn-container');
+                    if (btnContainer) {
+                        btnContainer.innerHTML = `
+                            <button onclick="bigCelebrate()" style="
+                                background: linear-gradient(135deg, var(--neon-cyan), var(--neon-magenta));
+                                color: var(--bg-dark);
+                                border: none;
+                                padding: 1rem 2rem;
+                                font-size: 1.25rem;
+                                font-weight: 700;
+                                border-radius: 12px;
+                                cursor: pointer;
+                                margin: 1rem 0;
+                                transition: transform 0.2s, box-shadow 0.2s;
+                            " onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 10px 40px rgba(0,245,255,0.4)';" 
+                               onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none';">
+                                🎊 More Confetti! 🎊
+                            </button>
+                        `;
+                    }
+                }
             } catch (error) {
                 document.getElementById('markdown-content').innerHTML = `
                     <h1>Error Loading Content</h1>
