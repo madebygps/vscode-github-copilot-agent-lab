@@ -35,6 +35,9 @@ jobs:
       
       - name: Prepare deployment
         run: |
+          # Create _site directory
+          mkdir -p ./_site/docs
+          
           # Copy Blazor app output to root
           cp -r publish/wwwroot/* ./_site/
           
