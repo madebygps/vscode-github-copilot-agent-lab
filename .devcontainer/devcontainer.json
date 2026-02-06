@@ -2,7 +2,7 @@
   "name": "Soc-Ops Python",
   "image": "mcr.microsoft.com/devcontainers/python:3.13",
   "features": {
-    "ghcr.io/devcontainers-extra/features/uv-tool:1": {}
+    "ghcr.io/va-h/devcontainers-features/uv": {}
   },
   "customizations": {
     "vscode": {
@@ -23,7 +23,7 @@
   "portsAttributes": {
     "8000": {
       "label": "FastAPI Dev Server",
-      "onAutoForward": "openPreview"
+      "onAutoForward": "notify"
     }
   }
 }

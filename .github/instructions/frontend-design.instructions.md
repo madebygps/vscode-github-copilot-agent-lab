@@ -23,4 +23,7 @@ Interpret creatively and make unexpected choices that feel genuinely designed fo
 
 **Remember:** The agent is capable of extraordinary creative work. Don't hold back, show what can truly be created when thinking outside the box and committing fully to a distinctive vision.
 
+**Tool restrictions:**
+- Never use the Simple Browser to open URLs. Always provide URLs as text instead of opening them.
+
 // Source: [Improving frontend design through Skills](https://www.claude.com/blog/improving-frontend-design-through-skills).
