@@ -1,6 +1,9 @@
 {
   "name": "Soc-Ops Python",
   "image": "mcr.microsoft.com/devcontainers/python:3.13",
+  "features": {
+    "ghcr.io/devcontainer-community/features/uv:1": {}
+  },
   "customizations": {
     "vscode": {
       "extensions": [
@@ -15,7 +18,7 @@
       ]
     }
   },
-  "postCreateCommand": "pip install uv && uv sync",
+  "postCreateCommand": "uv sync",
   "forwardPorts": [8000],
   "portsAttributes": {
     "8000": {
