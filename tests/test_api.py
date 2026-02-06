@@ -22,7 +22,7 @@ class TestHomePage:
 
     def test_home_sets_session_cookie(self, client: TestClient):
         response = client.get("/")
-        assert "soc_ops_session" in response.cookies
+        assert "session" in response.cookies
 
 
 class TestStartGame:
