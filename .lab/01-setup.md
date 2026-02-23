@@ -1,6 +1,6 @@
 # Part 1: Setup & Context Engineering
 
-[📚 Lab Guide](https://brunoborges.github.io/vscode-github-copilot-agent-lab/docs/) • [← Overview](00-overview.md)
+[📚 Lab Guide](https://copilot-dev-days.github.io/agent-lab-java/docs/) • [← Overview](00-overview.md)
 
 ---
 
@@ -14,7 +14,7 @@ In this section, you'll set up your development environment and teach GitHub Cop
 
 ### Step 1: Create Your Repository
 
-1. Open [github.com/brunoborges/vscode-github-copilot-agent-lab](https://github.com/brunoborges/vscode-github-copilot-agent-lab)
+1. Open [github.com/copilot-dev-days/agent-lab-java](https://github.com/copilot-dev-days/agent-lab-java)
 2. Click **Use this template** → **Create a new repository**
    - Name: `my-soc-ops-java`
    - Visibility: **Public**
@@ -132,6 +132,6 @@ You've learned how to:
 
 ---
 
-[📚 Lab Guide](https://brunoborges.github.io/vscode-github-copilot-agent-lab/docs/) • [← Overview](00-overview.md)
+[📚 Lab Guide](https://copilot-dev-days.github.io/agent-lab-java/docs/) • [← Overview](00-overview.md)
 
 👉 **[Continue to Part 2: Design-First Frontend →](02-design.md)**

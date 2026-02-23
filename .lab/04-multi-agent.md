@@ -215,7 +215,7 @@ Congratulations! You've completed the VS Code GitHub Copilot Agent Lab.
 
 ---
 
-[📚 Lab Guide](https://brunoborges.github.io/vscode-github-copilot-agent-lab/docs/) • [← Part 3](03-quiz-master.md)
+[📚 Lab Guide](https://copilot-dev-days.github.io/agent-lab-java/docs/) • [← Part 3](03-quiz-master.md)
 
 Happy Coding! 👋
 

@@ -1,6 +1,6 @@
 # 🎮 VS Code GitHub Copilot Agent Lab
 
-[📚 Lab Guide](https://brunoborges.github.io/vscode-github-copilot-agent-lab/docs/) • [← README](../README.md)
+[📚 Lab Guide](https://copilot-dev-days.github.io/agent-lab-java/docs/) • [← README](../README.md)
 
 ---
 
@@ -65,6 +65,6 @@ Before you begin, verify:
 
 ---
 
-[📚 Lab Guide](https://brunoborges.github.io/vscode-github-copilot-agent-lab/docs/) • [← README](../README.md)
+[📚 Lab Guide](https://copilot-dev-days.github.io/agent-lab-java/docs/) • [← README](../README.md)
 
 *Created for Java developers by the VS Code and Java teams*

@@ -1,6 +1,6 @@
 # Part 2: Design-First Frontend
 
-[📚 Lab Guide](https://brunoborges.github.io/vscode-github-copilot-agent-lab/docs/) • [← Part 1](01-setup.md)
+[📚 Lab Guide](https://copilot-dev-days.github.io/agent-lab-java/docs/) • [← Part 1](01-setup.md)
 
 ---
 
@@ -134,6 +134,6 @@ You've learned how to:
 
 ---
 
-[📚 Lab Guide](https://brunoborges.github.io/vscode-github-copilot-agent-lab/docs/) • [← Part 1](01-setup.md)
+[📚 Lab Guide](https://copilot-dev-days.github.io/agent-lab-java/docs/) • [← Part 1](01-setup.md)
 
 👉 **[Continue to Part 3: Custom Quiz Master →](03-quiz-master.md)**
