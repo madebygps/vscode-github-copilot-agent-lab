@@ -8,20 +8,21 @@ Social Bingo game for in-person mixers. Find people who match the questions and 
 
 ## Prerequisites
 
-- [.NET 10 SDK](https://dotnet.microsoft.com/download/dotnet/10.0) or higher
+- [Java 21 JDK](https://adoptium.net/) or higher
+- [Apache Maven 3.9+](https://maven.apache.org/) (or use the included Maven Wrapper)
 
 ## Run
 
 ```bash
-cd SocOps
-dotnet run
+cd socops
+./mvnw spring-boot:run
 ```
 
 ## Build
 
 ```bash
-cd SocOps
-dotnet build
+cd socops
+./mvnw clean package
 ```
 
 Deploys automatically to GitHub Pages on push to `main`.

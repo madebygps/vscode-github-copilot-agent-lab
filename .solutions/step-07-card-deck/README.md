@@ -4,15 +4,10 @@
 
 Soc Ops is an interactive social bingo game designed for in-person mixers, team events, and conferences. Find people who match the prompts, mark your card, and race to get 5 in a row!
 
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/2c6d0c33-72ec-47e8-b6bc-20837e7d830b" alt="Start Screen" width="300" />
-  <img src="https://github.com/user-attachments/assets/4785afd4-c22a-4b1c-9b78-64d426c599e9" alt="Game Board" width="300" />
-</p>
-
 ## ✨ Features
 
 - 🎲 **Randomized boards** — Every player gets a unique arrangement
-- 💾 **Auto-save progress** — Pick up where you left off
+- 💾 **Auto-save progress** — Pick up where you left off (localStorage)
 - 🏆 **Bingo detection** — Automatic win detection for rows, columns, and diagonals
 - 🎉 **Celebration modal** — Confetti-worthy victory screen
 - 📱 **Mobile-first** — Works great on phones at events
@@ -20,32 +15,39 @@ Soc Ops is an interactive social bingo game designed for in-person mixers, team 
 ## 🚀 Quick Start
 
 ### Prerequisites
-- [.NET 10 SDK](https://dotnet.microsoft.com/download/dotnet/10.0)
+- [Java 21 JDK](https://adoptium.net/) or higher
+- [Apache Maven 3.9+](https://maven.apache.org/) (or use the included Maven Wrapper)
 
 ### Run Locally
 ```bash
-cd SocOps
-dotnet run
-# Open http://localhost:5166
+cd socops
+./mvnw spring-boot:run
+# Open http://localhost:8080
 ```
 
 ### Build
 ```bash
-dotnet build SocOps/SocOps.csproj
+cd socops
+./mvnw clean package
+```
+
+### Test
+```bash
+cd socops
+./mvnw test
 ```
 
 ## 🎨 Customize Your Game
 
 ### Change Questions
-Edit `SocOps/Data/Questions.cs` to add your own icebreaker prompts:
-```csharp
-public static readonly List<string> QuestionsList = new()
-{
+Edit `socops/src/main/java/com/socops/data/IcebreakerPrompts.java` to add your own icebreaker prompts:
+```java
+public static final List<String> ALL_PROMPTS = List.of(
     "has a pet",
     "speaks more than 2 languages",
     "your custom question here",
-    // ... 24+ questions for a full board
-};
+    // ... 24 questions for a full board
+);
 ```
 
 ### Workshop Guide
@@ -53,20 +55,26 @@ public static readonly List<string> QuestionsList = new()
 
 ## 🛠️ Tech Stack
 
-- **Framework**: Blazor WebAssembly (.NET 10)
+- **Runtime**: Java 21
+- **Framework**: Spring Boot 3.4.2 with Thymeleaf
 - **Styling**: Custom CSS utilities (Tailwind-inspired)
-- **State**: Scoped services with localStorage persistence
+- **State**: Client-side JavaScript with localStorage persistence
+- **Build**: Apache Maven with Maven Wrapper
 - **Deployment**: GitHub Pages via Actions
 
 ## 📁 Project Structure
 
 ```
-SocOps/
-├── Components/     # BingoBoard, BingoSquare, Modals
-├── Models/         # Game state & data models
-├── Services/       # Game logic & state management
-├── Data/           # Question bank
-└── wwwroot/        # Static assets
+socops/
+├── src/main/java/com/socops/
+│   ├── web/            # Controllers & REST endpoints
+│   ├── model/          # Game records & enums
+│   ├── service/        # Board assembly & game logic
+│   └── data/           # Question bank
+├── src/main/resources/
+│   ├── templates/      # Thymeleaf templates
+│   └── static/         # CSS & static assets
+└── src/test/           # Unit tests
 ```
 
 ## 🚢 Deployment
